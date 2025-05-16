@@ -37,3 +37,16 @@ Publisher
 Subscriber
 ![Subscriber](screenshot/subscriber.png)
 
+## Monitoring Message Rates in RabbitMQ
+
+When I run the publisher using `cargo run`, it sends 5 events to the RabbitMQ message broker.  
+These events are then delivered to the subscriber which listens to the `"user_created"` queue.
+
+As a result, in the RabbitMQ management interface (http://localhost:15672), a visible spike appears in the Message rates chart.  
+This spike reflects the moment where the publisher sends multiple messages in a short burst.
+
+The spike is short-lived because the subscriber immediately consumes the messages.
+
+Below is a screenshot showing the spike that appears after running the publisher:
+
+![rabbitmq-publisher-spike](screenshot/spike.png)
