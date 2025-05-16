@@ -14,3 +14,9 @@ The total amount of data depends on the serialized size of each message, but rou
 - 5672: The default port used by RabbitMQ for AMQP connections (non-SSL).
 
 So, the full URL tells the publisher or subscriber to connect to a local RabbitMQ instance using default credentials over the AMQP protocol.
+
+## RabbitMQ Running Screenshot
+
+The following screenshot shows RabbitMQ running locally on Docker:
+
+![RabbitMQ Screenshot](screenshot/rabbitmq.png)
